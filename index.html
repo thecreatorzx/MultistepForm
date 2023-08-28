@@ -9,7 +9,14 @@
   <title>Frontend Mentor | Multi-step form</title>
 </head>
 <body>
-  <div class="nav"></div>
+  <div class="nav">
+    <div class="navig-area">
+    <div class="sec1 selected" value = 1>1</div>
+    <div class="sec2" value = 2>2</div>
+    <div class="sec3" value = 3>3</div>
+    <div class="sec4" value = 4>4</div>
+    </div>
+  </div>
   <div class="main">
     <div class="page1">
     <div class="infobox">
@@ -18,16 +25,16 @@
   </div>
     <div class="details">
       <label for="search1">Name</label>
-      <input type="search" name="searchbox" id="search1" placeholder="e.g. Stephen King">
+      <input type="text" name="searchbox" id="search1" placeholder="e.g. Stephen King">
       <label for="search2">Email Address</label>
-      <input type="search" name="searchbox" id="search2" placeholder="e.g. stephenking@lorem.com">
+      <input type="text" name="searchbox" id="search2" placeholder="e.g. stephenking@lorem.com">
       <label for="search3">Phone Number ( +91 )</label>
-      <input type="search" name="searchbox" id="search3" placeholder="e.g. 9876 5432 10">
+      <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="searchbox" id="search3" placeholder="e.g. 9876 5432 10" maxlength="10">
       </div>
     </div>
-    <div class="page2">
+    <div class="page2 none">
     <div class="infobox">
-      <h2 class="heading">Personal info</h2>
+      <h2 class="heading">Select your plan</h2>
       <p class="description">You have the option of monthly or yearly bill.</p>
     </div>
     <div class="details">
@@ -46,7 +53,7 @@
       </div>
      </div>
     </div>
-    <div class="page3">
+    <div class="page3 none">
     <div class="infobox">
       <h2 class="heading">Pick add-ons</h2>
       <p class="description">Add-ons help enhance your gaming experience.</p>
@@ -63,7 +70,7 @@
       <div class="profile"><div class="name">Customizable profile </div><div class="cost3">+$2/mo</div></div></div>
     </div>
     </div>
-    <div class="page4">
+    <div class="page4 none">
     <div class="infobox">
       <h2 class="heading">Finishing up</h2>
       <p class="description">Double-check everything looks OK before confirming.</p>
@@ -91,7 +98,7 @@
         </div>
       </div>
     </div>
-    <div class="congrats-page">
+    <div class="congrats-page none">
       <div class="logo">
         <img src="./assets/images/icon-checkmark.svg" alt="" srcset="">
       </div>
