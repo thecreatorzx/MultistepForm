@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <div class="nav"></div>
+  <div class="main">
+    <div class="page1">
+    <div class="infobox">
+      <h2 class="heading">Personal info</h2>
+      <p class="description">Please provide your name, email address, and phone number.</p>
+  </div>
+    <div class="details">
+      <label for="search1">Name</label>
+      <input type="search" name="searchbox" id="search1" placeholder="e.g. Stephen King">
+      <label for="search2">Email Address</label>
+      <input type="search" name="searchbox" id="search2" placeholder="e.g. stephenking@lorem.com">
+      <label for="search3">Phone Number ( +91 )</label>
+      <input type="search" name="searchbox" id="search3" placeholder="e.g. 9876 5432 10">
+      </div>
+    </div>
+    <div class="page2">
+    <div class="infobox">
+      <h2 class="heading">Personal info</h2>
+      <p class="description">You have the option of monthly or yearly bill.</p>
+    </div>
+    <div class="details">
+      <div class="options one">
+        <img src="./assets/images/icon-arcade.svg" alt="arcade" srcset="">
+        <div class="arcade">Arcade <div class="cost1">$9/mo</div></div>
+      </div>
+      <div class="options two">
+        <img src="./assets/images/icon-advanced.svg" alt="advanced" srcset="">
+        <div class="advanced">Advanced <div class="cost2">$12/mo</div></div></div>
+      <div class="options three">
+        <img src="./assets/images/icon-pro.svg" alt="arcade" srcset="">
+        <div class="pro">Pro <div class="cost3">$15/mo</div></div></div>
+      <div class="checkbox"><div class="mon">Monthly</div>
+      <div class="check"><div class="ball"></div></div><div class="year">Yearly</div>
+      </div>
+     </div>
+    </div>
+    <div class="page3">
+    <div class="infobox">
+      <h2 class="heading">Pick add-ons</h2>
+      <p class="description">Add-ons help enhance your gaming experience.</p>
+    </div>
+    <div class="details"><div class="options one">
+      <input type="checkbox" name="service" id="service">
+      <div class="service"><div class="name">Online service</div> <div class="cost1">+$1/mo</div></div>
+    </div>
+    <div class="options two">
+      <input type="checkbox" name="service" id="service">
+      <div class="storage"><div class="name">Larger storage</div> <div class="cost2">+$2/mo</div></div></div>
+    <div class="options three">
+      <input type="checkbox" name="service" id="service">
+      <div class="profile"><div class="name">Customizable profile </div><div class="cost3">+$2/mo</div></div></div>
+    </div>
+    </div>
+    <div class="page4">
+    <div class="infobox">
+      <h2 class="heading">Finishing up</h2>
+      <p class="description">Double-check everything looks OK before confirming.</p>
+    </div>
+      <div class="details">
+        <div class="final-prices">
+          <div class="plan">
+            <div class="plan-name">Arcade <span class="type">(Monthly)</span>
+            <div class="change">Change</div>
+            </div>
+            <div class="charge">$9/mo</div>
+          </div>
+          <div class="service1">Online service  
+            <div class="charge">+$1/mo</div>
+          </div>
+          <div class="service2">Larger storage
+            <div class="charge">+$2/mo</div>
+          </div>
+          <div class="service3">Customizable profile
+            <div class="charge">+$2/mo</div>
+          </div>
+        </div>
+        <div class="total"><p>Total <span class="type">(per month)</span></p>
+          <div class="charge">+$12/mo</div>
+        </div>
+      </div>
+    </div>
+    <div class="congrats-page">
+      <div class="logo">
+        <img src="./assets/images/icon-checkmark.svg" alt="" srcset="">
+      </div>
+      <div class="h2">Thank You!</div>
+      <p class="congrats">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+    </div>
+  </div>
+  <div class="foot">
+    <button class="prev" onclick="prev()">Go Back</button>
+    <button class="next" onclick="next()">Next Step</button>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
