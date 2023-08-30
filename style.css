@@ -23,12 +23,14 @@ body{
   width: 100vw;
   height: 160px;
   background: url(./assets/images/bg-sidebar-mobile.svg);
+  background-size: cover;
 }
 .navig-area {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 60vw;
+  max-width: 200px;
   height: 6vh;
 }
 .navig-area div {
@@ -52,6 +54,7 @@ body{
   position: relative;
   top: -10vh;
   width: 90vw;
+  max-width: 350px;
   height: 57vh;
   margin: 0 auto;
   background: #3333;
@@ -70,6 +73,7 @@ body{
 /* Page 1 */
 .infobox {
   width: 70vw;
+  max-width: 290px;
 }
 .heading {
   padding-bottom: 2vh;
@@ -113,11 +117,13 @@ body{
   display: flex;
   flex-direction: row;
   width: 73vw;
+  max-width: 290px;
   height: 9vh;
   font-size: .85rem;
   color:hsl(213, 96%, 18%);
   border-radius: 5px;
   border: 1px solid #9993;
+  cursor: pointer;
 }
 .options img {
   transform: scale(.6);
@@ -132,6 +138,16 @@ body{
   font-size: .7rem;
   color: #4448;
 }
+.extra::after {
+  padding-left: 5px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 800;
+  content : '2 months free';
+}
+.opted {
+  border: 1px solid blueviolet;
+  background-color: hsl(217, 100%, 97%);
+}
 .checkbox {
   display: flex;
   flex-direction: row;
@@ -139,6 +155,7 @@ body{
   align-items: center;
   font-size: .9rem;
   width: 73vw;
+  max-width: 290px;
   height: 6vh;
   padding: 0 50px;
   background: hsl(217, 100%, 97%);
@@ -152,12 +169,12 @@ body{
 }
 .ball{
   position: relative;
-  top: 3.5px;
+  top: 3px;
   left: 2.5px;
-  width: 14px;
+  width: 15px;
   aspect-ratio: 1;
   border-radius: 50%;
-  transform: translate(20.5px,-.3px);
+  transition: transform .2s ease-in-out;
   background: white;
 }
 .mon {
@@ -186,6 +203,12 @@ body{
   color: hsl(213, 96%, 18%);
   font-size: .8rem;
   font-weight: 800;
+}
+.page3 .options::after{
+  content :"";
+  position: absolute;
+  width: 20px;
+  height: 20px;
 }
 .name {
   width: 200px;
@@ -240,6 +263,12 @@ body{
   font-weight: 800;
   color: hsl(213, 96%, 18%);
 }
+.plan-name{
+  font-size: .9rem;
+}
+.type{
+  font-size: .8rem;
+}
 .service1,.service2, .service3 {
   display: flex;
   font-size: .7rem;
@@ -277,7 +306,7 @@ body{
 }
 /* congrats page */
 .congrats-page {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -298,11 +327,11 @@ body{
 }
 .logo::before {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   content: '';
   border-radius: 50px;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(1px,3px);
   border: 10px solid ;
   border-color: transparent transparent rgb(245, 91, 91) transparent;
 } 
@@ -313,20 +342,38 @@ body{
 }
 .congrats{
   text-align: center;
-  font-size: .9rem;
+  font-size: .85rem;
+  line-height: 18px;
   color: hsl(212, 7%, 58%)
+}
+/* note */
+.note {
+  position: absolute;
+  transform:translateY(-30px);
+  text-align: center;
+  width: 100vw;
+  padding: 0 20vw;
+  font-size: .8rem;
+}
+.note>i{
+  display: inline;
+  color: red;
 }
 /* foot area */
 .foot {
+  display: flex;
+  justify-content: flex-end;
   padding: 10px;
   position: relative;
   bottom: -7vh;
   width: 100vw;
-  height: 11vh;
+  height: 10vh;
   background: white;
+  padding-right: 15px;
 }
-.prev,.next {
+.prev,.next, .submitted {
   width: 25vw;
+  max-width: 120px;
   height: 6vh;
   border-radius: 5px;
   background: hsl(213, 96%, 18%);
@@ -338,11 +385,33 @@ body{
 .next {
   position: absolute;
   right: 15px;
+  z-index: 2;
+}
+.next:hover {
+  filter: brightness(1.5);
 }
 .prev {
+  position: absolute;
   background: none;
   color: #99b;
   border: none;
+  left: 15px;
+}
+.prev:hover{
+  color: #555;
+}
+.submitted{
+  position: absolute;
+  display: none;
+  background: blue;
+}
+.submitted:hover{
+  background: rgb(2, 2, 216);
+}
+.return{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .none {
   display: none;

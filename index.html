@@ -38,18 +38,18 @@
       <p class="description">You have the option of monthly or yearly bill.</p>
     </div>
     <div class="details">
-      <div class="options one">
+      <div class="options one opted" onclick="plantype(0)">
         <img src="./assets/images/icon-arcade.svg" alt="arcade" srcset="">
-        <div class="arcade">Arcade <div class="cost1">$9/mo</div></div>
+        <div class="arcade">Arcade <div class="cst cost1">$9/mo</div></div>
       </div>
-      <div class="options two">
+      <div class="options two"  onclick="plantype(1)">
         <img src="./assets/images/icon-advanced.svg" alt="advanced" srcset="">
-        <div class="advanced">Advanced <div class="cost2">$12/mo</div></div></div>
-      <div class="options three">
+        <div class="advanced">Advanced <div class="cst cost2">$12/mo</div></div></div>
+      <div class="options three" onclick="plantype(2)">
         <img src="./assets/images/icon-pro.svg" alt="arcade" srcset="">
-        <div class="pro">Pro <div class="cost3">$15/mo</div></div></div>
-      <div class="checkbox"><div class="mon">Monthly</div>
-      <div class="check"><div class="ball"></div></div><div class="year">Yearly</div>
+        <div class="pro">Pro <div class="cst cost3">$15/mo</div></div></div>
+      <div class="checkbox" ><div class="mon">Monthly</div>
+      <div class="check" onclick="planchange()"><div class="ball"></div></div><div class="year">Yearly</div>
       </div>
      </div>
     </div>
@@ -58,16 +58,17 @@
       <h2 class="heading">Pick add-ons</h2>
       <p class="description">Add-ons help enhance your gaming experience.</p>
     </div>
-    <div class="details"><div class="options one">
+    <div class="details">
+      <div class="options one" onclick="additional(0)">
       <input type="checkbox" name="service" id="service">
-      <div class="service"><div class="name">Online service</div> <div class="cost1">+$1/mo</div></div>
+      <div class="service"><div class="name">Online service</div> <div class="costs cost1">+$1/mo</div></div>
     </div>
-    <div class="options two">
+    <div class="options two" onclick="additional(1)">
       <input type="checkbox" name="service" id="service">
-      <div class="storage"><div class="name">Larger storage</div> <div class="cost2">+$2/mo</div></div></div>
-    <div class="options three">
+      <div class="storage"><div class="name">Larger storage</div> <div class="cost2 costs">+$2/mo</div></div></div>
+    <div class="options three" onclick="additional(2)">
       <input type="checkbox" name="service" id="service">
-      <div class="profile"><div class="name">Customizable profile </div><div class="cost3">+$2/mo</div></div></div>
+      <div class="profile"><div class="name">Customizable profile </div><div class="cost3 costs">+$3/mo</div></div></div>
     </div>
     </div>
     <div class="page4 none">
@@ -78,23 +79,23 @@
       <div class="details">
         <div class="final-prices">
           <div class="plan">
-            <div class="plan-name">Arcade <span class="type">(Monthly)</span>
-            <div class="change">Change</div>
+            <div><span class="plan-name">Arcade</span> <span class="type">(Monthly)</span>
+            <div class="change" onclick="planchanged()">Change</div>
             </div>
             <div class="charge">$9/mo</div>
           </div>
           <div class="service1">Online service  
-            <div class="charge">+$1/mo</div>
+            <div class="charge">not selected</div>
           </div>
           <div class="service2">Larger storage
-            <div class="charge">+$2/mo</div>
+            <div class="charge">not selected</div>
           </div>
           <div class="service3">Customizable profile
-            <div class="charge">+$2/mo</div>
+            <div class="charge">not selected</div>
           </div>
         </div>
         <div class="total"><p>Total <span class="type">(per month)</span></p>
-          <div class="charge">+$12/mo</div>
+          <div class="charge">+$15/mo</div>
         </div>
       </div>
     </div>
@@ -103,12 +104,14 @@
         <img src="./assets/images/icon-checkmark.svg" alt="" srcset="">
       </div>
       <div class="h2">Thank You!</div>
-      <p class="congrats">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+      <p class="congrats"></p>
     </div>
   </div>
+  <div class="note"># Note : All the <i>*</i> ( important ) fields must be filled to enable the submit button.</div>
   <div class="foot">
     <button class="prev" onclick="prev()">Go Back</button>
     <button class="next" onclick="next()">Next Step</button>
+    <button class="submitted" onclick="submit()">Confirm</button>
   </div>
 </body>
 <script src="./script.js"></script>
