@@ -41,12 +41,13 @@ body{
   color: white;
   text-align: center;
   padding-top: 7px;
-  font-size: .8rem;
+  font-size: .75rem;
+  font-weight: 800;
   background: transparent;
 }
 .sec1:hover,.sec2:hover,.sec3:hover,.sec4:hover,.navig-area .selected {
   background: lightblue;
-  color: rgb(32, 32, 165);
+  color: rgb(27, 27, 153);
   cursor:pointer;
   border-color: rgb(5, 5, 240);
 }
@@ -364,8 +365,8 @@ body{
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-  position: relative;
-  bottom: -7vh;
+  position: absolute;
+  bottom: 0;
   width: 100vw;
   height: 10vh;
   background: white;
@@ -402,7 +403,6 @@ body{
 }
 .submitted{
   position: absolute;
-  display: none;
   background: blue;
 }
 .submitted:hover{

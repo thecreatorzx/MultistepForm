@@ -217,4 +217,7 @@ function submit() {
     value = 1;
     done = true;
   }
+  s1.value = "";
+  s2.value = "";
+  s3.value = "";
 }
