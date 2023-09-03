@@ -1,3 +1,4 @@
+let navigation = document.querySelector(".nav");
 let nav = document.querySelector(".navig-area");
 let previous = document.querySelector(".foot .prev");
 let nxt = document.querySelector(".foot .next");
@@ -81,10 +82,11 @@ function plantype(x) {
 }
 function planchange() {
   if (yearly) {
-    ball.style.transform = "translate(0)";
+    ball.style.transform = "translate(0,-.5px)";
     yearly = false;
     year.style.color = "#3334";
     month.style.color = "hsl(213,96%,18%)";
+    document.querySelector(".check").style.background = "#ccc";
     cost.forEach((e) => {
       let amount = 6 + 3 * costvalue;
       plancharge[costvalue - 1] = amount;
@@ -102,6 +104,7 @@ function planchange() {
     costvalue = 1;
     planselected = plancharge[a];
   } else {
+    document.querySelector(".check").style.background = "hsl(213, 96%, 18%)";
     ball.style.transform = "translate(19.5px,-.3px)";
     yearly = true;
     year.style.color = "hsl(213, 96%, 18%)";
@@ -196,7 +199,7 @@ function submit() {
     previous.classList.add("none");
     document.querySelector(".foot").classList.add("return");
     submitted.innerHTML = "Return";
-    nav.style.display = "none";
+    navigation.style.display = "none";
     note.style.display = "none";
     document.querySelector(".nav .sec4").classList.remove("selected");
     document.querySelector(
@@ -208,7 +211,7 @@ function submit() {
     document.querySelector(".congrats-page").classList.add("none");
     document.querySelector(".congrats-page").style.display = "none";
     submitted.innerHTML = "Submit";
-    nav.style.display = "flex";
+    navigation.style.display = "flex";
     note.style.display = "inline";
     document.querySelector(".foot").classList.remove("return");
     nxt.classList.remove("none");
@@ -220,4 +223,12 @@ function submit() {
   s1.value = "";
   s2.value = "";
   s3.value = "";
+}
+function checkfilled(e) {
+  e.classList.remove("empty");
+  e.previousElementSibling.classList.remove("empty2");
+  if (e.value == "") {
+    e.classList.add("empty");
+    e.previousElementSibling.classList.add("empty2");
+  }
 }
